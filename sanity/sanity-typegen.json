@@ -1,0 +1,5 @@
+{
+  "path": "../web-nextjs/src/**/*.{ts,tsx,js,jsx}",
+  "schema": "./schema.json",
+  "generates": "../web-nextjs/src/sanity/types.ts"
+} 
