@@ -3,8 +3,8 @@ import { NextRequest, NextResponse } from 'next/server'
 const domain = process.env.SHOPIFY_STORE_DOMAIN!
 const storefrontAccessToken = process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN!
 
-async function shopifyGraphQL(query: string, variables?: any) {
-  const URL = `https://${domain}/api/2023-07/graphql.json`
+async function shopifyGraphQL(query: string, variables?: Record<string, unknown>) {
+  const URL = `https://${domain}/api/2025-04/graphql.json`
   
   const options = {
     method: "POST",
@@ -39,14 +39,14 @@ async function shopifyGraphQL(query: string, variables?: any) {
 }
 
 type RouteParams = {
-  params: {
+  params: Promise<{
     handle: string
-  }
+  }>
 }
 
 export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
-    const { handle } = params
+    const { handle } = await params
 
     if (!handle) {
       return NextResponse.json(

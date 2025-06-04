@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { sanityFetch } from '@/sanity/live'
 import { carQuery } from '@/sanity/queries'
 import { urlFor } from '@/sanity/image'
@@ -7,9 +8,9 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 function getCarTitle(car: NonNullable<CarQueryResult>): string {
@@ -45,13 +46,14 @@ function formatDate(dateString: string): string {
 }
 
 export default async function CarDetailPage({ params }: PageProps) {
-  const { data: car } = await sanityFetch({ query: carQuery, params: { slug: params.slug } })
+  const { slug } = await params
+  const { data: car } = await sanityFetch({ query: carQuery, params: { slug } })
 
   if (!car) {
     notFound()
   }
 
-  const mainPhoto = car.photos.find((photo: any) => photo.isMainPhoto) || car.photos[0]
+  const mainPhoto = car.photos?.find((photo: { isMainPhoto?: boolean }) => photo.isMainPhoto) || car.photos?.[0]
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -75,7 +77,7 @@ export default async function CarDetailPage({ params }: PageProps) {
             {/* Main Image */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="aspect-video relative">
-                {mainPhoto ? (
+                {mainPhoto?.asset ? (
                   <Image
                     src={urlFor(mainPhoto.asset)?.width(800).height(450).url() || ''}
                     alt={mainPhoto.alt || getCarTitle(car)}
@@ -89,19 +91,20 @@ export default async function CarDetailPage({ params }: PageProps) {
                   </div>
                 )}
                 <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  {car.availabilityStatus === 'available' ? 'Available' : car.availabilityStatus.replace('-', ' ').toUpperCase()}
+                  {car.availabilityStatus === 'available' ? 'Available' : car.availabilityStatus?.replace('-', ' ').toUpperCase() || 'Status Unknown'}
                 </div>
               </div>
               
               {/* Photo Gallery */}
-              {car.photos.length > 1 && (
+              {car.photos && car.photos.length > 1 && (
                 <div className="p-4">
                   <div className="grid grid-cols-4 gap-2">
-                    {car.photos.slice(0, 8).map((photo: any, index: number) => (
+                    {car.photos.slice(0, 8).map((photo: unknown, index: number) => (
                       <div key={index} className="aspect-square relative rounded overflow-hidden">
+                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                         <Image
-                          src={urlFor(photo.asset)?.width(150).height(150).url() || ''}
-                          alt={photo.alt || `${getCarTitle(car)} - Photo ${index + 1}`}
+                          src={urlFor((photo as { asset: any }).asset)?.width(150).height(150).url() || ''}
+                          alt={(photo as { alt?: string }).alt || `${getCarTitle(car)} - Photo ${index + 1}`}
                           fill
                           className="object-cover hover:scale-105 transition-transform cursor-pointer"
                         />
@@ -218,10 +221,10 @@ export default async function CarDetailPage({ params }: PageProps) {
                 <div className="prose prose-gray max-w-none">
                   {/* This would need proper portable text rendering in a real app */}
                   <p className="text-gray-700 leading-relaxed">
-                    {car.description.map((block: any, index: number) => 
-                      block._type === 'block' ? (
+                    {car.description.map((block: unknown, index: number) => 
+                      (block as { _type: string })._type === 'block' ? (
                         <span key={index}>
-                          {block.children?.map((child: any) => child.text).join(' ')}
+                          {(block as { children?: Array<{ text: string }> }).children?.map((child: unknown) => (child as { text: string }).text).join(' ')}
                         </span>
                       ) : null
                     )}

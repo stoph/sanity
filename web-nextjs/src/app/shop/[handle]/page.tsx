@@ -5,13 +5,14 @@ import { getProduct, formatPrice, getShopifyUrl } from '@/lib/shopify'
 import type { ShopifyProduct, ShopifyVariant } from '@/types/shopify'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     handle: string
-  }
+  }>
 }
 
 export default async function ProductDetailPage({ params }: PageProps) {
-  const product: ShopifyProduct = await getProduct(params.handle)
+  const { handle } = await params
+  const product: ShopifyProduct = await getProduct(handle)
 
   if (!product || !product.id) {
     notFound()

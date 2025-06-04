@@ -22,7 +22,7 @@ export async function GET() {
   }`
 
   try {
-    const response = await fetch(`https://${domain}/api/2023-07/graphql.json`, {
+    const response = await fetch(`https://${domain}/api/2025-04/graphql.json`, {
       method: 'POST',
       headers: {
         'X-Shopify-Storefront-Access-Token': token,

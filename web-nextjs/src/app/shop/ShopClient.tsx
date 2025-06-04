@@ -116,7 +116,7 @@ export default function ShopClient({ initialProducts, initialPageInfo }: ShopCli
               const product = productEdge.node
               const mainImage = product.images.edges[0]?.node
               const price = product.priceRange.minVariantPrice
-              const isAvailable = product.variants.edges.some((variant: any) => variant.node.availableForSale)
+              const isAvailable = product.variants.edges.some((variant: { node: { availableForSale: boolean } }) => variant.node.availableForSale)
 
               return (
                 <div

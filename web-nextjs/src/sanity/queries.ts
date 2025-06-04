@@ -1,5 +1,4 @@
 import { defineQuery } from "next-sanity";
-import type { CarsQueryResult, CarQueryResult, FeaturedCarsQueryResult } from "./types";
 
 // GROQ queries for cars - TypeGen will automatically generate types for these
 export const carsQuery = defineQuery(`*[_type == "car" && availabilityStatus == "available"] | order(publishedAt desc) {

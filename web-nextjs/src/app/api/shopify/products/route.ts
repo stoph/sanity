@@ -18,8 +18,8 @@ export async function OPTIONS() {
   })
 }
 
-async function shopifyGraphQL(query: string, variables?: any) {
-  const URL = `https://${domain}/api/2023-07/graphql.json`
+async function shopifyGraphQL(query: string, variables?: Record<string, unknown>) {
+  const URL = `https://${domain}/api/2025-04/graphql.json`
   
   const options = {
     method: "POST",

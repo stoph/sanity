@@ -1,3 +1,11 @@
+export interface PortableTextBlock {
+  _type: string
+  children?: Array<{
+    _type: string
+    text: string
+  }>
+}
+
 export interface Car {
   _id: string
   titleOverride?: string
@@ -16,7 +24,7 @@ export interface Car {
   negotiable?: boolean
   mileage?: number
   condition?: string
-  description?: any[] // Portable text array
+  description?: PortableTextBlock[] // Portable text array
   location: {
     city: string
     state: string

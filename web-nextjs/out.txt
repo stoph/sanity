@@ -1,0 +1,1565 @@
+
+> web-nextjs@0.1.0 build
+> next build
+
+   ▲ Next.js 15.3.3
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 1000ms
+   Linting and checking validity of types ...
+
+./src/app/cars/[slug]/page.tsx
+104:26  Warning: Unused eslint-disable directive (no problems were reported from '@typescript-eslint/no-explicit-any').
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/11) ...
+   Generating static pages (2/11) 
+   Generating static pages (5/11) 
+   Generating static pages (8/11) 
+Shopify Config: { domain: 'stoph-test.myshopify.com', hasToken: true, tokenLength: 32 }
+Shopify API Response: {
+  "data": {
+    "products": {
+      "pageInfo": {
+        "hasNextPage": true,
+        "hasPreviousPage": false,
+        "startCursor": "eyJsYXN0X2lkIjo4MjAzNjU3MTE3OTIwLCJsYXN0X3ZhbHVlIjo4MjAzNjU3MTE3OTIwfQ==",
+        "endCursor": "eyJsYXN0X2lkIjo4MjQ3Mzg2NjY5MjgwLCJsYXN0X3ZhbHVlIjo4MjQ3Mzg2NjY5MjgwfQ=="
+      },
+      "edges": [
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3MTE3OTIwLCJsYXN0X3ZhbHVlIjo4MjAzNjU3MTE3OTIwfQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657117920",
+            "title": "The Videographer Snowboard",
+            "handle": "the-videographer-snowboard",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "685.85",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210553056",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/files/Main.jpg?v=1703274346",
+                    "altText": "The top and bottom view of a snowboard. The top has view is turquoise and black with graphics of\n        trees. The bottom view is turquoise with the word hydrogen written in cursive.",
+                    "width": 1600,
+                    "height": 1600
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/44048501571808",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/files/snowboard.png?v=1732311353",
+                    "altText": null,
+                    "width": 1600,
+                    "height": 1600
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819018464",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "685.85",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3MTUwNjg4LCJsYXN0X3ZhbHVlIjo4MjAzNjU3MTUwNjg4fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657150688",
+            "title": "The Hidden Snowboard",
+            "handle": "the-hidden-snowboard",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "749.95",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210323680",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/Main_c8ff0b5d-c712-429a-be00-b29bd55cbc9d.jpg?v=1703274345",
+                    "altText": "The top view and bottom view of a snowboard. The top view is black with a singular peach cube.\n          The bottom view has a graphic of a stack of blocks in a gradient from light blue, to pink to peach.",
+                    "width": 1600,
+                    "height": 1600
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819084000",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "749.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3MjQ4OTkyLCJsYXN0X3ZhbHVlIjo4MjAzNjU3MjQ4OTkyfQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657248992",
+            "title": "The Collection Snowboard: Hydrogen",
+            "handle": "the-collection-snowboard-hydrogen",
+            "description": "This exceptional new snowboard delivers unmatched performance with its state-of-the-art H2 design. Its lightweight construction enables swift movements while the robust material guarantees durability. The striking graphics add a dash of style.",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "400.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210421984",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/Main_0a40b01b-5021-48c1-80d1-aa8ab4876d3d.jpg?v=1703274345",
+                    "altText": "Top and bottom view of a snowboard. The top view shows stylized hydrogen bonds and the bottom view\n        shows “H2” in a brush script typeface.",
+                    "width": 1600,
+                    "height": 1600
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819182304",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "400.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3MjgxNzYwLCJsYXN0X3ZhbHVlIjo4MjAzNjU3MjgxNzYwfQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657281760",
+            "title": "The Complete Snowboard",
+            "handle": "the-complete-snowboard",
+            "description": "This PREMIUM snowboard is so SUPERDUPER awesome!",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "699.95",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210487520",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg?v=1703274345",
+                    "altText": "Top and bottom view of a snowboard. The top view shows abstract circles and lines in shades of teal.\n          The bottom view shows abstract circles and lines in shades of purple and blue with the text “SHOPIFY” in a\n          sans serif typeface on top.",
+                    "width": 1600,
+                    "height": 1600
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819378912",
+                    "title": "Ice",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "699.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819411680",
+                    "title": "Dawn",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "699.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819444448",
+                    "title": "Powder",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "699.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819477216",
+                    "title": "Electric",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "699.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819509984",
+                    "title": "Sunset",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "699.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3MzE0NTI4LCJsYXN0X3ZhbHVlIjo4MjAzNjU3MzE0NTI4fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657314528",
+            "title": "Gift Card",
+            "handle": "gift-card",
+            "description": "This is a gift card for the store",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "10.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210454752",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/gift_card.png?v=1703274345",
+                    "altText": "Gift card that shows text: Generated data gift card",
+                    "width": 2881,
+                    "height": 2881
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819247840",
+                    "title": "$10",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "10.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819280608",
+                    "title": "$25",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "25.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819313376",
+                    "title": "$50",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "50.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819346144",
+                    "title": "$100",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "100.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3MzQ3Mjk2LCJsYXN0X3ZhbHVlIjo4MjAzNjU3MzQ3Mjk2fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657347296",
+            "title": "The Out of Stock Snowboard",
+            "handle": "the-out-of-stock-snowboard",
+            "description": "This highly sought-after snowboard is renowned for its exceptional performance and cutting-edge design. Despite its consistent unavailability, the anticipation it generates among enthusiasts is a testament to its unmatched riding experience. Stay tuned for restocks to seize this unparalleled snowboarding marvel.",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "885.95",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210520288",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/Main_f44a9605-cd62-464d-b095-d45cdaa0d0d7.jpg?v=1703274346",
+                    "altText": "Top and bottom view of a snowboard. The top view shows a toggle at the top in shades of blue and\n        yellow. The bottom view shows an abstract illustration of toggles in blues and yellows.",
+                    "width": 3908,
+                    "height": 3908
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819542752",
+                    "title": "Default Title",
+                    "availableForSale": false,
+                    "priceV2": {
+                      "amount": "885.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3MzgwMDY0LCJsYXN0X3ZhbHVlIjo4MjAzNjU3MzgwMDY0fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657380064",
+            "title": "The Compare at Price Snowboard",
+            "handle": "the-compare-at-price-snowboard",
+            "description": "Unapologetically expensive, this snowboard is the epitome of opulence in the snowboarding world. Its exorbitant price tag is justified by its trend-setting design and the undeniable prestige it brings. Flaunt this extravagant piece on the slopes and relish in the envious glances it draws. And even better, it's more expensive here than any other store!",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "785.85",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210585824",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/snowboard_sky.png?v=1703274346",
+                    "altText": "Top and bottom view of a snowboard. The top view shows pixelated clouds, with the top-most one being\n        the shape of the Shopify bag logo. The bottom view has a pixelated cloudy sky with blue, pink and purple\n        colours.",
+                    "width": 3097,
+                    "height": 3908
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819739360",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "785.85",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3NDEyODMyLCJsYXN0X3ZhbHVlIjo4MjAzNjU3NDEyODMyfQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657412832",
+            "title": "The Multi-location Snowboard",
+            "handle": "the-multi-location-snowboard",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "729.95",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210618592",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/Main_0a4e9096-021a-4c1e-8750-24b233166a12.jpg?v=1703274346",
+                    "altText": "Top and bottom view of a snowboard. The top view shows a pixelated Shopify bag logo and a pixelated\n          character reviewing a clipboard with a questioning expression with a bright green-blue background. The bottom\n          view is a pattern of many pixel characters with a bright green-blue background.",
+                    "width": 1600,
+                    "height": 1600
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819772128",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "729.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3NDQ1NjAwLCJsYXN0X3ZhbHVlIjo4MjAzNjU3NDQ1NjAwfQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657445600",
+            "title": "The 3p Fulfilled Snowboard",
+            "handle": "the-3p-fulfilled-snowboard",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "2629.95",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210651360",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg?v=1703274346",
+                    "altText": "Top and bottom view of a snowboard. The top view shows 7 stacked hexagons and the bottom view shows\n          a small, centred hexagonal logo for Hydrogen.",
+                    "width": 1600,
+                    "height": 1600
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819837664",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "2629.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3NDc4MzY4LCJsYXN0X3ZhbHVlIjo4MjAzNjU3NDc4MzY4fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657478368",
+            "title": "The Inventory Not Tracked Snowboard",
+            "handle": "the-inventory-not-tracked-snowboard",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "949.95",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210684128",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/snowboard_purple_hydrogen.png?v=1703274346",
+                    "altText": "Top and bottom view of a snowboard. The top view shows a centred hexagonal logo for Hydrogen that\n          appears to radiate outwards, as well as some overlapping hexagons at the bottom. The bottom view shows an\n          abstract angular grid in purples.",
+                    "width": 3097,
+                    "height": 3908
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819870432",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "949.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3NTExMTM2LCJsYXN0X3ZhbHVlIjo4MjAzNjU3NTExMTM2fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657511136",
+            "title": "The Multi-managed Snowboard",
+            "handle": "the-multi-managed-snowboard",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "629.95",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210716896",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/Main_9129b69a-0c7b-4f66-b6cf-c4222f18028a.jpg?v=1703274347",
+                    "altText": "Top and bottom view of a snowboard. The top view shows an illustration with varied outlined shapes\n          in black. The bottom view shows a black box character with an H pointing, and surrounded by black outlined\n          illustrative elements.",
+                    "width": 1600,
+                    "height": 1600
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819903200",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "629.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3NTQzOTA0LCJsYXN0X3ZhbHVlIjo4MjAzNjU3NTQzOTA0fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657543904",
+            "title": "The Collection Snowboard: Oxygen",
+            "handle": "the-collection-snowboard-oxygen",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "1025.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210749664",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg?v=1703274347",
+                    "altText": "Top and bottom view of a snowboard. The top view shows a stylized scene of trees, mountains, sky and\n        a sun in red colours. The bottom view has blue wavy lines in the background with the text “Oxygen” in a\n        stylized script typeface.",
+                    "width": 1600,
+                    "height": 1600
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519819935968",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "1025.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3NTc2NjcyLCJsYXN0X3ZhbHVlIjo4MjAzNjU3NTc2NjcyfQ==",
+          "node": {
+    ✓ Generating static pages (11/11)
+         "id": "gid://shopify/Product/8203657576672",
+            "title": "The Collection Snowboard: Liquid",
+            "handle": "the-collection-snowboard-liquid",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "749.95",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210782432",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg?v=1703274349",
+                    "altText": "Top and bottom view of a snowboard. The top view shows a stylized scene of water, trees, mountains,\n        sky and a moon in blue colours. The bottom view has a blue liquid, drippy background with the text “liquid” in\n        a stylized script typeface.",
+                    "width": 1600,
+                    "height": 1600
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519820067040",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "749.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjAzNjU3NjQyMjA4LCJsYXN0X3ZhbHVlIjo4MjAzNjU3NjQyMjA4fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8203657642208",
+            "title": "Selling Plans Ski Wax",
+            "handle": "selling-plans-ski-wax",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "9.95",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210815200",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/snowboard_wax.png?v=1703274349",
+                    "altText": "A bar of golden yellow wax",
+                    "width": 2881,
+                    "height": 2881
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210847968",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/wax-special.png?v=1703274349",
+                    "altText": "A bar of purple wax",
+                    "width": 2881,
+                    "height": 2881
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39532210880736",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/sample-normal-wax.png?v=1703274349",
+                    "altText": "a small cube of wax",
+                    "width": 2881,
+                    "height": 2881
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519820099808",
+                    "title": "Selling Plans Ski Wax",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "24.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519820132576",
+                    "title": "Special Selling Plans Ski Wax",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "49.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44519820165344",
+                    "title": "Sample Selling Plans Ski Wax",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "9.95",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjQ3Mzc0ODA3MjY0LCJsYXN0X3ZhbHVlIjo4MjQ3Mzc0ODA3MjY0fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8247374807264",
+            "title": "LOVESICK - Radcliffe Dolls",
+            "handle": "lovesick-radcliffe-dolls",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "0.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39719985414368",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/RADCLIFFpair.jpg?v=1707514581",
+                    "altText": null,
+                    "width": 3600,
+                    "height": 3600
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762327843040",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "150.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762327875808",
+                    "title": "Lala",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762327908576",
+                    "title": "Kiki",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjQ3Mzc0ODcyODAwLCJsYXN0X3ZhbHVlIjo4MjQ3Mzc0ODcyODAwfQ==",
+          "node": {
+            "id": "gid://shopify/Product/8247374872800",
+            "title": "Lovers - Black",
+            "handle": "lovers-black",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "0.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39719985643744",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/black_lovers-canvas_lifestyle-12_massuploadwomen_vertical_shopifycopy_800x800_7427abed-1b98-4bfd-8a6f-7f1a9f873d0f.jpg?v=1707514584",
+                    "altText": null,
+                    "width": 800,
+                    "height": 800
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762328137952",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "149.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762328170720",
+                    "title": "12 x 18 / Gallery Wrapped",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762328203488",
+                    "title": "18 x 24 / Gallery Wrapped",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762328236256",
+                    "title": "24 x 36 / Gallery Wrapped",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762328269024",
+                    "title": "30 x 40 / Gallery Wrapped",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjQ3Mzc0OTA1NTY4LCJsYXN0X3ZhbHVlIjo4MjQ3Mzc0OTA1NTY4fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8247374905568",
+            "title": "Lovers - White",
+            "handle": "lovers-white",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "0.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39719985840352",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/white_lovers_lifestyle-12_massuploadwomen_vertical_shopifycopy_800x800_0a2400fb-8614-4fcb-9f95-900124358731.jpg?v=1707514587",
+                    "altText": null,
+                    "width": 800,
+                    "height": 800
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762328826080",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "149.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762328858848",
+                    "title": "12 x 18 / Gallery Wrapped",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762328891616",
+                    "title": "18 x 24 / Gallery Wrapped",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762328924384",
+                    "title": "24 x 36 / Gallery Wrapped",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762328957152",
+                    "title": "30 x 40 / Gallery Wrapped",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjQ3Mzg1NjUzNDcyLCJsYXN0X3ZhbHVlIjo4MjQ3Mzg1NjUzNDcyfQ==",
+          "node": {
+            "id": "gid://shopify/Product/8247385653472",
+            "title": "Lovers Tarot Card Zip Up",
+            "handle": "lovers-tarot-card-zip-up",
+            "description": "Wrap yourself in the intrigue of \"Lovers Tarot Card\" zip hoodie, where the mystic meets the modern romance echoed by Swift's lyrical storytelling and Kelce's fearless play. This hoodie, adorned with Tarot-inspired art of skeletons in an eternal embrace, symbolizes a love as enduring and profound as the bond shared by the celebrated couple.",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "0.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39720040169696",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/LovelyNessss-LoversZip-UpCrop.jpg?v=1707515400",
+                    "altText": null,
+                    "width": 900,
+                    "height": 900
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762377748704",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "72.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762377781472",
+                    "title": "SMALL",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762377814240",
+                    "title": "MEDIUM",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762377847008",
+                    "title": "LARGE",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762377879776",
+                    "title": "XLARGE",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjQ3Mzg1NzE5MDA4LCJsYXN0X3ZhbHVlIjo4MjQ3Mzg1NzE5MDA4fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8247385719008",
+            "title": "FRAGILE 6 PANEL HAT",
+            "handle": "fragile-6-panel-hat",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "0.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39720040431840",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/390000438_FRAGILE6PANELHAT_BLACK_02.jpg?v=1707515403",
+                    "altText": null,
+                    "width": 2048,
+                    "height": 2048
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762377945312",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "45.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762377978080",
+                    "title": "BLACK / OS / 100% COTTON",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjQ3Mzg1ODE3MzEyLCJsYXN0X3ZhbHVlIjo4MjQ3Mzg1ODE3MzEyfQ==",
+          "node": {
+            "id": "gid://shopify/Product/8247385817312",
+            "title": "FRAGILE T-SHIRT",
+            "handle": "fragile-t-shirt",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "0.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39720040792288",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/399001806_FRAGILET-SHIRT_ECRU_01.jpg?v=1707515406",
+                    "altText": null,
+                    "width": 2048,
+                    "height": 2048
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378109152",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "45.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378141920",
+                    "title": "ECRU / S / 100% COTTON",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378174688",
+                    "title": "ECRU / M / 100% COTTON",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378207456",
+                    "title": "ECRU / L / 100% COTTON",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378240224",
+                    "title": "ECRU / XL / 100% COTTON",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjQ3Mzg1OTQ4Mzg0LCJsYXN0X3ZhbHVlIjo4MjQ3Mzg1OTQ4Mzg0fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8247385948384",
+            "title": "Lover T-Shirts",
+            "handle": "lover-t-shirts",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "0.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39720042332384",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/3_c70a458b-73e0-499e-ad72-afe4a18ca27a.png?v=1707515418",
+                    "altText": null,
+                    "width": 1200,
+                    "height": 800
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378371296",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "50.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378404064",
+                    "title": "Natural / S",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378436832",
+                    "title": "Natural / M",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378469600",
+                    "title": "Natural / L",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378502368",
+                    "title": "Natural / X",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjQ3Mzg2MTc3NzYwLCJsYXN0X3ZhbHVlIjo4MjQ3Mzg2MTc3NzYwfQ==",
+          "node": {
+            "id": "gid://shopify/Product/8247386177760",
+            "title": "Lover Snapback",
+            "handle": "lover-snapback",
+            "description": "Sport the \"Lover Snapback Hat,\" a stylish nod to Swift's \"Lover\" album, creatively reimagined to celebrate themes of love and adventure. It's not just an accessory; it's a statement piece that carries the essence of Swift's \"Lover,\" encapsulating the joy, color, and depth of heartfelt connections.",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "0.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39720043217120",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/1_b1d8c850-93d0-403d-a4e5-f9d653e5b1a1.png?v=1707515428",
+                    "altText": null,
+                    "width": 1200,
+                    "height": 800
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378895584",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "55.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378928352",
+                    "title": "Stone",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762378961120",
+                    "title": "Brown",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjQ3Mzg2MjQzMjk2LCJsYXN0X3ZhbHVlIjo4MjQ3Mzg2MjQzMjk2fQ==",
+          "node": {
+            "id": "gid://shopify/Product/8247386243296",
+            "title": "Lover Crew",
+            "handle": "lover-crew",
+            "description": "",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "0.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39720043479264",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/1_7035e563-1d23-4f36-bda5-0b40588e5ed5.png?v=1707515431",
+                    "altText": null,
+                    "width": 1200,
+                    "height": 800
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762379026656",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "150.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762379059424",
+                    "title": "Green / S",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762379092192",
+                    "title": "Green / M",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762379124960",
+                    "title": "Green / L",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762379157728",
+                    "title": "Green / X",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "cursor": "eyJsYXN0X2lkIjo4MjQ3Mzg2NjY5MjgwLCJsYXN0X3ZhbHVlIjo4MjQ3Mzg2NjY5MjgwfQ==",
+          "node": {
+            "id": "gid://shopify/Product/8247386669280",
+            "title": "Lovely Again",
+            "handle": "lovely-again",
+            "description": "Discover \"Lovely Again,\" an art piece that harks back to the charm of old-school scrapbooking with its collage of cutout images and words. This artwork captures the whimsical nostalgia of crafting personal love notes, reminiscent of Swift's intricate storytelling and Kelce's dynamic off-field persona.",
+            "priceRange": {
+              "minVariantPrice": {
+                "amount": "0.0",
+                "currencyCode": "USD"
+              }
+            },
+            "images": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductImage/39720044265696",
+                    "url": "https://cdn.shopify.com/s/files/1/0680/3456/0224/products/lovely_again-canvas_living_room-1_copymasseditlegacy_vertical_shopify-2021copy_800x800_37eea233-d5c2-4a4b-9fde-135c7eece697.jpg?v=1707515441",
+                    "altText": null,
+                    "width": 800,
+                    "height": 800
+                  }
+                }
+              ]
+            },
+            "variants": {
+              "edges": [
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762380337376",
+                    "title": "Default Title",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "149.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762380370144",
+                    "title": "12 x 18 / Gallery Wrapped",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762380402912",
+                    "title": "18 x 24 / Gallery Wrapped",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/44762380435680",
+                    "title": "24 x 36 / Gallery Wrapped",
+                    "availableForSale": true,
+                    "priceV2": {
+                      "amount": "0.0",
+                      "currencyCode": "USD"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "id": "gid://shopify/ProductVariant/4476   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                      350 B         166 kB
+├ ○ /_not-found                            977 B         102 kB
+├ ƒ /[slug]                              2.18 kB         168 kB
+├ ƒ /api/shop/products                     144 B         101 kB
+├ ƒ /api/shopify/product/[handle]          144 B         101 kB
+├ ƒ /api/shopify/products                  144 B         101 kB
+├ ƒ /api/test-shopify                      144 B         101 kB
+├ ○ /articles                              350 B         166 kB
+├ ○ /cars                                  350 B         166 kB
+├ ƒ /cars/[slug]                           350 B         166 kB
+├ ○ /shop                                2.71 kB         113 kB
+└ ƒ /shop/[handle]                         185 B         110 kB
++ First Load JS shared by all             101 kB
+  ├ chunks/4bd1b696-458daea476cc64da.js  53.2 kB
+  ├ chunks/684-d094514376e42fa7.js       45.8 kB
+  └ other shared chunks (total)          2.23 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

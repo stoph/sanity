@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { sanityFetch } from '@/sanity/live'
 import { landingPageQuery, featuredCarsQuery, recentArticlesQuery } from '@/sanity/queries'
 import { urlFor } from '@/sanity/image'
-import type { LandingPageQueryResult, FeaturedCarsQueryResult, RecentArticlesQueryResult } from '@/sanity/types'
+import type { FeaturedCarsQueryResult, RecentArticlesQueryResult } from '@/sanity/types'
 
 function getCarTitle(car: FeaturedCarsQueryResult[0]): string {
   if (car.titleOverride) {

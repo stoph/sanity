@@ -7,7 +7,7 @@ export default function NotFound() {
         <span className="text-8xl mb-8 block">📦</span>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Product Not Found</h1>
         <p className="text-gray-600 mb-8 max-w-md">
-          Sorry, we couldn't find the product you're looking for. It may have been removed or the link might be incorrect.
+          Sorry, we couldn&apos;t find the product you&apos;re looking for. It may be out of stock or no longer available.
         </p>
         <Link
           href="/shop"

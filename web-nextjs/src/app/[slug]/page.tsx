@@ -8,13 +8,14 @@ import { PortableText } from '@portabletext/react'
 import ProductShowcase from '@/components/ProductShowcase'
 
 type Props = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export default async function PageRoute({ params }: Props) {
+  const { slug } = await params
   const { data: page } = await sanityFetch({ 
     query: pageQuery, 
-    params: { slug: params.slug } 
+    params: { slug } 
   })
 
   if (!page) {

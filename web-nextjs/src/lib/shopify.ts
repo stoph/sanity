@@ -1,8 +1,8 @@
 const domain = process.env.SHOPIFY_STORE_DOMAIN!
 const storefrontAccessToken = process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN!
 
-async function ShopifyData(query: string, variables?: any) {
-  const URL = `https://${domain}/api/2023-07/graphql.json`
+async function ShopifyData(query: string, variables?: Record<string, unknown>) {
+  const URL = `https://${domain}/api/2025-04/graphql.json`
 
   const options = {
     method: "POST",
@@ -24,9 +24,6 @@ async function ShopifyData(query: string, variables?: any) {
     
     const data = await response.json()
     
-    // Debug logging
-    console.log('Shopify API Response:', JSON.stringify(data, null, 2))
-    
     if (data.errors) {
       console.error('GraphQL Errors:', data.errors)
       throw new Error('GraphQL errors: ' + JSON.stringify(data.errors))
@@ -41,13 +38,6 @@ async function ShopifyData(query: string, variables?: any) {
 
 // Get products with pagination support
 export async function getProductsWithPagination(first: number = 24, after?: string) {
-  // Debug environment variables
-  console.log('Shopify Config:', {
-    domain: domain || 'NOT SET',
-    hasToken: !!storefrontAccessToken,
-    tokenLength: storefrontAccessToken?.length || 0
-  })
-
   const query = `
     query getProducts($first: Int!, $after: String) {
       products(first: $first, after: $after) {
@@ -116,9 +106,6 @@ export async function getProductsWithPagination(first: number = 24, after?: stri
   
   const products = response.data.products.edges || []
   const pageInfo = response.data.products.pageInfo
-  
-  console.log(`Found ${products.length} products`)
-  console.log('Page info:', pageInfo)
   
   return { products, pageInfo }
 }
