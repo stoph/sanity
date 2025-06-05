@@ -250,7 +250,7 @@ export default async function LandingPage() {
                 return (
                   <Link
                     key={article._id}
-                    href={`/${article.slug.current}`}
+                    href={`/articles/${article.slug.current}`}
                     className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
                   >
                     <div className="aspect-video relative">
@@ -274,9 +274,9 @@ export default async function LandingPage() {
                       <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
                         {article.title}
                       </h3>
-                      {article.description && (
+                      {article.excerpt && (
                         <p className="text-gray-600 text-sm mb-2 line-clamp-3">
-                          {article.description}
+                          {article.excerpt}
                         </p>
                       )}
                       {article.publishedAt && (

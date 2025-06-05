@@ -5,6 +5,18 @@ export const structure: StructureResolver = (S) =>
     .id('root')
     .title('Content')
     .items([
+      // Articles
+      S.listItem()
+        .title('Articles')
+        .schemaType('article')
+        .icon(() => '📝')
+        .child(
+          S.documentList()
+            .title('Articles')
+            .filter('_type == "article"')
+            .apiVersion('2025-06-01')
+        ),
+      
       // Cars with sub-categories
       S.listItem()
         .title('Cars')

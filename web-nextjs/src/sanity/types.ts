@@ -20,6 +20,69 @@ export type ProductShowcase = {
   customNote?: string;
 };
 
+export type Article = {
+  _id: string;
+  _type: "article";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
+  excerpt?: string;
+  featuredImage?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    caption?: string;
+    _type: "image";
+  };
+  author?: string;
+  content?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h2" | "h3" | "h4" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  } | {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    caption?: string;
+    _type: "image";
+    _key: string;
+  } | {
+    _key: string;
+  } & ProductShowcase>;
+  tags?: Array<string>;
+  publishedAt?: string;
+  featured?: boolean;
+};
+
 export type Page = {
   _id: string;
   _type: "page";
@@ -28,7 +91,7 @@ export type Page = {
   _rev: string;
   title?: string;
   slug?: Slug;
-  pageType?: "landing" | "about" | "contact" | "article" | "general";
+  pageType?: "landing" | "article" | "general";
   description?: string;
   featuredImage?: {
     asset?: {
@@ -306,7 +369,7 @@ export type SanityAssetSourceData = {
   url?: string;
 };
 
-export type AllSanitySchemaTypes = ProductShowcase | Page | Car | SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageHotspot | SanityImageCrop | SanityFileAsset | SanityImageAsset | SanityImageMetadata | Geopoint | Slug | SanityAssetSourceData;
+export type AllSanitySchemaTypes = ProductShowcase | Article | Page | Car | SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageHotspot | SanityImageCrop | SanityFileAsset | SanityImageAsset | SanityImageMetadata | Geopoint | Slug | SanityAssetSourceData;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ../web-nextjs/src/sanity/queries.ts
 // Variable: carsQuery
@@ -544,7 +607,7 @@ export type PagesQueryResult = Array<{
   _rev: string;
   title?: string;
   slug?: Slug;
-  pageType?: "about" | "article" | "contact" | "general" | "landing";
+  pageType?: "article" | "general" | "landing";
   description?: string;
   featuredImage?: {
     asset?: {
@@ -639,7 +702,7 @@ export type PageQueryResult = {
   _rev: string;
   title?: string;
   slug?: Slug;
-  pageType?: "about" | "article" | "contact" | "general" | "landing";
+  pageType?: "article" | "general" | "landing";
   description?: string;
   featuredImage?: {
     asset?: {
@@ -737,7 +800,7 @@ export type LandingPageQueryResult = {
   _rev: string;
   title?: string;
   slug?: Slug;
-  pageType?: "about" | "article" | "contact" | "general" | "landing";
+  pageType?: "article" | "general" | "landing";
   description?: string;
   featuredImage?: {
     asset?: {
@@ -823,17 +886,16 @@ export type LandingPageQueryResult = {
   publishedAt?: string;
 } | null;
 // Variable: recentArticlesQuery
-// Query: *[_type == "page" && pageType == "article"] | order(publishedAt desc)[0..2] {  ...}
+// Query: *[_type == "article"] | order(publishedAt desc)[0..2] {  ...}
 export type RecentArticlesQueryResult = Array<{
   _id: string;
-  _type: "page";
+  _type: "article";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
   title?: string;
   slug?: Slug;
-  pageType?: "about" | "article" | "contact" | "general" | "landing";
-  description?: string;
+  excerpt?: string;
   featuredImage?: {
     asset?: {
       _ref: string;
@@ -848,39 +910,7 @@ export type RecentArticlesQueryResult = Array<{
     caption?: string;
     _type: "image";
   };
-  heroTitle?: string;
-  heroSubtitle?: string;
-  heroImage?: {
-    asset?: {
-      _ref: string;
-      _type: "reference";
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-    };
-    media?: unknown;
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    alt?: string;
-    _type: "image";
-  };
-  heroButtons?: Array<{
-    text?: string;
-    link?: string;
-    style?: "primary" | "secondary";
-    _key: string;
-  }>;
-  features?: Array<{
-    icon?: string;
-    title?: string;
-    description?: string;
-    _key: string;
-  }>;
-  contactInfo?: {
-    email?: string;
-    phone?: string;
-    address?: string;
-    hours?: string;
-  };
+  author?: string;
   content?: Array<{
     _key: string;
   } & ProductShowcase | {
@@ -890,7 +920,7 @@ export type RecentArticlesQueryResult = Array<{
       _type: "span";
       _key: string;
     }>;
-    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+    style?: "blockquote" | "h2" | "h3" | "h4" | "normal";
     listItem?: "bullet" | "number";
     markDefs?: Array<{
       href?: string;
@@ -915,8 +945,138 @@ export type RecentArticlesQueryResult = Array<{
     _type: "image";
     _key: string;
   }>;
+  tags?: Array<string>;
   publishedAt?: string;
+  featured?: boolean;
 }>;
+// Variable: articlesQuery
+// Query: *[_type == "article"] | order(publishedAt desc) {  ...}
+export type ArticlesQueryResult = Array<{
+  _id: string;
+  _type: "article";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
+  excerpt?: string;
+  featuredImage?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    caption?: string;
+    _type: "image";
+  };
+  author?: string;
+  content?: Array<{
+    _key: string;
+  } & ProductShowcase | {
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "blockquote" | "h2" | "h3" | "h4" | "normal";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  } | {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    caption?: string;
+    _type: "image";
+    _key: string;
+  }>;
+  tags?: Array<string>;
+  publishedAt?: string;
+  featured?: boolean;
+}>;
+// Variable: articleQuery
+// Query: *[_type == "article" && slug.current == $slug][0] {  ...}
+export type ArticleQueryResult = {
+  _id: string;
+  _type: "article";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
+  excerpt?: string;
+  featuredImage?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    caption?: string;
+    _type: "image";
+  };
+  author?: string;
+  content?: Array<{
+    _key: string;
+  } & ProductShowcase | {
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "blockquote" | "h2" | "h3" | "h4" | "normal";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  } | {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    caption?: string;
+    _type: "image";
+    _key: string;
+  }>;
+  tags?: Array<string>;
+  publishedAt?: string;
+  featured?: boolean;
+} | null;
 
 // Query TypeMap
 import "@sanity/client";
@@ -929,6 +1089,8 @@ declare module "@sanity/client" {
     "*[_type == \"page\" && slug.current == $slug][0] {\n  ...\n}": PageQueryResult;
     "*[_type == \"page\" && featured == true] | order(publishedAt desc) {\n  ...\n}": FeaturedPagesQueryResult;
     "*[_type == \"page\" && pageType == \"landing\"][0] {\n  ...\n}": LandingPageQueryResult;
-    "*[_type == \"page\" && pageType == \"article\"] | order(publishedAt desc)[0..2] {\n  ...\n}": RecentArticlesQueryResult;
+    "*[_type == \"article\"] | order(publishedAt desc)[0..2] {\n  ...\n}": RecentArticlesQueryResult;
+    "*[_type == \"article\"] | order(publishedAt desc) {\n  ...\n}": ArticlesQueryResult;
+    "*[_type == \"article\" && slug.current == $slug][0] {\n  ...\n}": ArticleQueryResult;
   }
 }

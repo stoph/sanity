@@ -1,15 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { sanityFetch } from '@/sanity/live'
-import { pagesQuery } from '@/sanity/queries'
+import { articlesQuery } from '@/sanity/queries'
 import { urlFor } from '@/sanity/image'
-import type { PagesQueryResult } from '@/sanity/types'
+import type { ArticlesQueryResult } from '@/sanity/types'
 
 export default async function ArticlesPage() {
-  const { data: allPages } = await sanityFetch({ query: pagesQuery })
-  
-  // Filter for articles only
-  const articles = allPages?.filter(page => page.pageType === 'article') || []
+  const { data: articles } = await sanityFetch({ query: articlesQuery })
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -56,7 +53,7 @@ export default async function ArticlesPage() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {articles.length === 0 ? (
+        {!articles || articles.length === 0 ? (
           <div className="text-center py-12">
             <div className="text-6xl mb-4">📝</div>
             <h2 className="text-2xl font-bold text-gray-900 mb-2">No Articles Yet</h2>
@@ -76,13 +73,13 @@ export default async function ArticlesPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {articles.map((article: PagesQueryResult[0]) => {
+              {articles.map((article: ArticlesQueryResult[0]) => {
                 if (!article.slug?.current) return null;
                 
                 return (
                   <Link
                     key={article._id}
-                    href={`/${article.slug.current}`}
+                    href={`/articles/${article.slug.current}`}
                     className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
                   >
                     <div className="aspect-video relative">
@@ -106,20 +103,25 @@ export default async function ArticlesPage() {
                       <h3 className="font-semibold text-xl text-gray-900 mb-2 line-clamp-2">
                         {article.title}
                       </h3>
-                      {article.description && (
+                      {article.excerpt && (
                         <p className="text-gray-600 text-sm mb-3 line-clamp-3">
-                          {article.description}
+                          {article.excerpt}
                         </p>
                       )}
-                      {article.publishedAt && (
-                        <p className="text-gray-500 text-xs">
-                          {new Date(article.publishedAt).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                          })}
-                        </p>
-                      )}
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        {article.publishedAt && (
+                          <span>
+                            {new Date(article.publishedAt).toLocaleDateString('en-US', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric',
+                            })}
+                          </span>
+                        )}
+                        {article.author && (
+                          <span>By {article.author}</span>
+                        )}
+                      </div>
                     </div>
                   </Link>
                 );

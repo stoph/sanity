@@ -32,6 +32,15 @@ export const landingPageQuery = defineQuery(`*[_type == "page" && pageType == "l
 }`);
 
 // Recent articles query
-export const recentArticlesQuery = defineQuery(`*[_type == "page" && pageType == "article"] | order(publishedAt desc)[0..2] {
+export const recentArticlesQuery = defineQuery(`*[_type == "article"] | order(publishedAt desc)[0..2] {
+  ...
+}`);
+
+// Article queries  
+export const articlesQuery = defineQuery(`*[_type == "article"] | order(publishedAt desc) {
+  ...
+}`);
+
+export const articleQuery = defineQuery(`*[_type == "article" && slug.current == $slug][0] {
   ...
 }`); 
