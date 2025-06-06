@@ -28,7 +28,6 @@ export const page = defineType({
       options: {
         list: [
           { title: 'Landing Page', value: 'landing' },
-          { title: 'Article Page', value: 'article' },
           { title: 'General Page', value: 'general' },
         ],
       },

@@ -87,16 +87,6 @@ export const structure: StructureResolver = (S) =>
                     .apiVersion('2025-06-01')
                 ),
               S.listItem()
-                .title('Article Pages')
-                .schemaType('page')
-                .icon(() => '📝')
-                .child(
-                  S.documentList()
-                    .title('Article Pages')
-                    .filter('_type == "page" && pageType == "article"')
-                    .apiVersion('2025-06-01')
-                ),
-              S.listItem()
                 .title('General Pages')
                 .schemaType('page')
                 .icon(() => '📄')
@@ -106,14 +96,14 @@ export const structure: StructureResolver = (S) =>
                     .filter('_type == "page" && pageType == "general"')
                     .apiVersion('2025-06-01')
                 ),
-                S.listItem()
+              S.listItem()
                 .title('Other Pages')
                 .schemaType('page')
                 .icon(() => '📄')
                 .child(
                   S.documentList()
                     .title('General Pages')
-                    .filter('_type == "page"')
+                    .filter('_type == "page" && !defined(pageType)')
                     .apiVersion('2025-06-01')
                 ),
             ])
